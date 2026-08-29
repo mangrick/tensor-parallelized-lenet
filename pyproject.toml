@@ -1,0 +1,22 @@
+[project]
+name = "tensor-parallelized-lenet"
+version = "1.0.0"
+requires-python = ">=3.12"
+dependencies = [
+    "tqdm==4.70.0",
+    "torch==2.13.0",
+    "torchvision==0.28.0"
+]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.uv.sources]
+torch = [
+  { index = "pytorch-cpu" },
+]
+torchvision = [
+  { index = "pytorch-cpu" },
+]
